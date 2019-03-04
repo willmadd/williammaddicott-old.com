@@ -1,0 +1,14 @@
+.projectsButton{
+    background-color: brown;
+    height: 100px;
+    width:100px;
+    border-radius: 50%;
+    color:white;
+    cursor: pointer;
+    outline: none;
+}
+
+.projectsButton:hover{
+  background-color: blue;
+  transition: 0.5s
+}

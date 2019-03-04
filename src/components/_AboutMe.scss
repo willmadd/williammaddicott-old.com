@@ -1,0 +1,24 @@
+.about-me{
+  background:grey;
+  flex:1;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // position: relative;
+  h1{
+    max-width:600px;
+    // position: absolute;
+
+  -webkit-animation: header-slide-in 3s; /* Safari 4+ */
+  -moz-animation:    header-slide-in 3s; /* Fx 5+ */
+  -o-animation:      header-slide-in 3s; /* Opera 12+ */
+  animation:         header-slide-in 3s; /* IE 10+, Fx 29+ */
+  }
+}
+
+@keyframes header-slide-in {
+  0%   { left: 120vw; }
+  66%   { left: 120vw; }
+  100% { left: 0; }
+}

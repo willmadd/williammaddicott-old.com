@@ -1,0 +1,40 @@
+@import '/components/_colours.scss';
+@import '/components/_Header.scss';
+@import '/components/_AboutMe.scss';
+@import '/components/_Services.scss';
+
+
+@font-face {
+  font-family: 'lockeregular';
+  src: url('/fonts/locke-regular-webfont.woff2') format('woff2'),
+       url('/fonts/locke-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body{
+  font-family: 'lockeregular';
+}
+
+.App{
+  display:flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.App-header {
+  // background-color: #fffdd0;
+  background: $white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: $dark;
+}
+
+.App-link {
+  color: #61dafb;
+}
+

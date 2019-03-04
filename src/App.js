@@ -1,25 +1,33 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.scss";
+import * as api from './database/getData'
+import Header from "./components/Header";
+import AboutMe from "./components/AboutMe";
+import Services from "./components/Services";
 
 class App extends Component {
+  state={
+    query:[],
+  }
+
+componentDidMount=()=>{
+  let query = api.getData();
+
+query.then(res=>{
+ this.setState({
+   query:res.data
+ }) 
+})
+}
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        
+        <Header/>
+        <AboutMe/>
+<Services/>
+
       </div>
     );
   }
